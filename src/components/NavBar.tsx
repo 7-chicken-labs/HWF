@@ -1,24 +1,20 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 function NavBar() {
   const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "About Us", href: "/about-us" },
-    { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Resources", href: "/resources" },
-    { label: "Contact", href: "/contact" },
+    { label: "Page 1", href: "#" },
+    { label: "Page 2", href: "#" },
+    { label: "Page 3", href: "#" },
+    { label: "Page 4", href: "#" },
+    { label: "Page 5", href: "#" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  const desktopLinksRef = useRef<HTMLDivElement>(null);
-  const mobileLinksRef = useRef<HTMLAnchorElement[]>([]);
 
   const [imgError, setImgError] = useState(false);
 
@@ -27,14 +23,15 @@ function NavBar() {
   };
 
   return (
-    <div>
-      <nav className="absolute w-full z-25 flex items-start justify-between px-6 md:px-12 lg:px-20 py-6 bg-transparent">
+    <div className="absolute w-full box-border px-4 md:px-12 lg:px-20 py-4 ">
+      <nav
+        className="w-full z-25 flex items-center justify-between text-black 
+      md:bg-white/20 md:backdrop-blur-md md:border md:border-white/30 
+        md:rounded-full px-6 py-3 md:shadow-md"
+      >
         {/* Logo */}
         <div>
-          <Link
-            href="/"
-            className="hover:text-white transition-colors duration-300 flex items-center"
-          >
+          <Link href="/" className="flex items-center">
             {!imgError ? (
               <Image
                 src="/miraco-logo.png"
@@ -45,18 +42,15 @@ function NavBar() {
                 onError={() => setImgError(true)} // Show text if image fails
               />
             ) : (
-              <p className="newfont text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-bold leading-tight text-cinzel">
-                Miraco
+              <p className="text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-bold leading-tight text-cinzel">
+                Logo
               </p>
             )}
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div
-          ref={desktopLinksRef}
-          className="hidden md:flex items-center space-x-8 text-white/90 border border-white rounded-full py-3 px-5"
-        >
+        <div className="hidden md:flex items-center space-x-8 py-3 px-5">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -73,7 +67,7 @@ function NavBar() {
           onClick={toggleMobileMenu}
           name="menu-button"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-          className="md:hidden z-30 relative text-white hover:text-gray-300 transition-colors duration-300"
+          className="md:hidden relative cursor-pointer"
         >
           {isMobileMenuOpen ? (
             <X className="w-6 h-6" />
@@ -93,18 +87,14 @@ function NavBar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-full w-100 max-w-[100vw] bg-black/95 backdrop-blur-md z-25 md:hidden
+        className={`fixed top-0 right-0 h-full w-100 max-w-[100vw] text-black bg-white/60 backdrop-blur-md z-25 md:hidden
         transform transition-transform duration-300 ease-in-out
         ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
         <div className="flex flex-col h-full">
           {/* Header */}
-          <div className="flex items-center justify-end p-6 border-b border-white/10">
-            <button
-              aria-label={"Close menu"}
-              onClick={toggleMobileMenu}
-              className="text-white hover:text-gray-300 transition-colors duration-300"
-            >
+          <div className="flex items-center justify-end p-6">
+            <button aria-label={"Close menu"} onClick={toggleMobileMenu}>
               <X className="w-6 h-6" />
             </button>
           </div>
@@ -117,10 +107,7 @@ function NavBar() {
                   key={link.label}
                   href={link.href}
                   onClick={toggleMobileMenu}
-                  ref={(el) => {
-                    if (el) mobileLinksRef.current[i] = el;
-                  }}
-                  className="block text-white text-xl font-light hover:text-gray-300 transition-colors duration-300 border-b border-white/10 pb-4"
+                  className="block text-xl font-light border-b border-black/10 pb-4"
                 >
                   {link.label}
                 </a>
@@ -129,8 +116,8 @@ function NavBar() {
           </div>
 
           {/* Footer */}
-          <div className="p-6 border-t border-white/10">
-            <p className="text-white/60 text-sm text-center">Miraco</p>
+          <div className="p-6">
+            <p className="text-sm text-center">Logo</p>
           </div>
         </div>
       </div>
