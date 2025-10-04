@@ -50,12 +50,12 @@ function NavBar() {
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 py-3 px-5">
+        <div className="hidden md:flex items-center space-x-8 p-2">
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="hover:text-white transition-colors duration-300 text-m"
+              className="hover:text-gray-700 transition-colors duration-300 text-m"
             >
               {link.label}
             </a>
