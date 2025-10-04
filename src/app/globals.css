@@ -3,6 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #ffffff;
+  --brand-color: #2563eb;
+  --brand-hover: #1d4ed8;
+  --brand-text: #ffffff;
+  --brand-border: #2563eb;
 }
 
 @theme inline {
