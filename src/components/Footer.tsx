@@ -10,18 +10,17 @@ import {
   Mail,
   // Github,
 } from "lucide-react";
-import Image from "next/image";
+// import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     company: [
-      { title: "Page 1", href: "#" },
-      { title: "Page 2", href: "#" },
-      { title: "Page 3", href: "#" },
-      { title: "Page 4", href: "#" },
-      { title: "Page 5", href: "#" },
+      { title: "Home", href: "/" },
+      { title: "About Us", href: "/about-us" },
+      { title: "Programs", href: "/programs" },
+      { title: "Contact", href: "/contact" },
     ],
     contact: [
       {

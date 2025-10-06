@@ -3,36 +3,36 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
+import Button from "./Button";
 
 function NavBar() {
   const navLinks = [
-    { label: "Page 1", href: "#" },
-    { label: "Page 2", href: "#" },
-    { label: "Page 3", href: "#" },
-    { label: "Page 4", href: "#" },
-    { label: "Page 5", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "/about-us" },
+    { label: "Programs", href: "/programs" },
+    { label: "Contact", href: "/contact" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const [imgError, setImgError] = useState(false);
+  // const [imgError, setImgError] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   return (
-    <div className="absolute w-full box-border px-4 md:px-12 lg:px-20 py-4 ">
+    <div className="absolute flex items-center justify-center w-full z-50 box-border px-4 md:px-12 lg:px-20 py-4 ">
       <nav
-        className="w-full z-25 flex items-center justify-between text-black 
-      md:bg-white/20 md:backdrop-blur-md md:border md:border-white/30 
+        className="w-full max-w-5xl z-25 flex items-center justify-between text-white 
+      md:backdrop-blur-md md:border md:border-white/30 
         md:rounded-full px-6 py-3 md:shadow-md"
       >
         {/* Logo */}
         <div>
           <Link href="/" className="flex items-center">
-            {!imgError ? (
+            {/* {!imgError ? (
               <Image
                 src="/miraco-logo.png"
                 alt="Miraco"
@@ -41,25 +41,35 @@ function NavBar() {
                 className="object-contain"
                 onError={() => setImgError(true)} // Show text if image fails
               />
-            ) : (
+            ) : ( */}
               <p className="text-2xl md:text-2xl lg:text-2xl xl:text-2xl font-bold leading-tight text-cinzel">
                 Logo
               </p>
-            )}
+            {/* )} */}
           </Link>
         </div>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-8 py-3 px-5">
+        <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={link.href}
-              className="hover:text-white transition-colors duration-300 text-m"
+              className="hover:text-gray-200 transition-colors duration-300 text-m"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
+        </div>
+
+        <div className="hidden md:flex">
+          <Button
+            label="Join Us"
+            bgColor="#ffffff"
+            textColor="#000"
+            padding="py-2 px-4"
+            borderColor="white"
+          />
         </div>
 
         {/* Mobile Menu Button */}
@@ -87,7 +97,7 @@ function NavBar() {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-full w-100 max-w-[100vw] text-black bg-white/60 backdrop-blur-md z-25 md:hidden
+        className={`fixed top-0 right-0 h-full w-100 max-w-[100vw] text-black bg-white backdrop-blur-md z-25 md:hidden
         transform transition-transform duration-300 ease-in-out
         ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"}`}
       >
@@ -102,15 +112,15 @@ function NavBar() {
           {/* Menu Items */}
           <div className="flex-1 flex flex-col justify-center px-6">
             <div className="space-y-8">
-              {navLinks.map((link, i) => (
-                <a
+              {navLinks.map((link) => (
+                <Link
                   key={link.label}
                   href={link.href}
                   onClick={toggleMobileMenu}
                   className="block text-xl font-light border-b border-black/10 pb-4"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
