@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
 
 interface TestimonialCardProps {
@@ -24,7 +25,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <div
-      className="rounded-3xl p-4 text-black"
+      className="rounded-3xl py-6 md:p-4 text-black"
     >
       {/* Speech Bubble */}
       {description && (
@@ -46,7 +47,9 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       {/* Profile Section */}
       <div className="flex items-center gap-4">
         {image && (
-          <img
+          <Image
+            width={40}
+            height={40}
             src={image}
             alt={name || "Profile image"}
             className="w-12 h-12 rounded-full object-cover"

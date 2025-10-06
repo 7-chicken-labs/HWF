@@ -4,6 +4,7 @@ import TestimonialSection, {
   Testimonial,
 } from "@/components/TestimonialSection";
 import TwoColumnSection from "@/components/TwoColumnSection";
+import WhyChooseHWF from "./WhyChooseHWF";
 
 export default function Home() {
   const testimonials: Testimonial[] = [
@@ -60,7 +61,7 @@ export default function Home() {
             <br />
             But here&apos;s the good news: you don&apos;t have to power through
             alone. At HWF, we understand the challenges of modern urban living,
-            and we're here to support you with real solutions for real life.
+            and we&apos;re here to support you with real solutions for real life.
           </>
         }
         imageUrl="/images/home-image-1.jpg"
@@ -82,10 +83,12 @@ export default function Home() {
         imageUrl="/images/home-image-2.jpg"
       />
 
+      <WhyChooseHWF />
+
       <ParallaxSection
         backgroundImage="/images/home-bg.jpg"
-        title="Feeling Drained by Daily Life? You're Not Alone."
-        subtitle="Late nights. Constant stress. Aches that linger and worries that won’t quit.
+        title="Feeling Drained by Daily Life? You&apos;re Not Alone."
+        subtitle="Late nights. Constant stress. Aches that linger and worries that won&apos;t quit.
 When work, family responsibilities, and health demands collide, staying well- physically or
 emotionally- can feel out of reach."
         buttonText="Begin Your Wellness Journey"

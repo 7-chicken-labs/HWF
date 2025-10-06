@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 
 interface TwoColumnSectionProps {
   label?: string;
@@ -35,7 +35,7 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({
             className={
               imagePosition === "left"
                 ? "order-2 lg:order-2"
-                : "order-2 lg:order-1"
+                : "order-1 lg:order-1"
             }
           >
             {label && (
@@ -58,8 +58,8 @@ const TwoColumnSection: React.FC<TwoColumnSectionProps> = ({
             ref={rightContentRef}
             className={`space-y-8 lg:space-y-12 ${
               imagePosition === "left"
-                ? "order-1 lg:order-1"
-                : "order-2 lg:order-2"
+                ? "order-2 lg:order-1"
+                : "order-1 lg:order-2"
             }`}
           >
             <Image
