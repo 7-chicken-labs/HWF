@@ -17,11 +17,10 @@ export default function Footer() {
 
   const footerLinks = {
     company: [
-      { title: "Page 1", href: "#" },
-      { title: "Page 2", href: "#" },
-      { title: "Page 3", href: "#" },
-      { title: "Page 4", href: "#" },
-      { title: "Page 5", href: "#" },
+      { title: "Home", href: "/" },
+      { title: "About Us", href: "/about-us" },
+      { title: "Programs", href: "/programs" },
+      { title: "Contact", href: "/contact" },
     ],
     contact: [
       {
