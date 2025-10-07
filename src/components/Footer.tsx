@@ -10,6 +10,7 @@ import {
   Mail,
   // Github,
 } from "lucide-react";
+import Link from "next/link";
 // import Image from "next/image";
 
 export default function Footer() {
@@ -121,12 +122,12 @@ export default function Footer() {
             <ul className="space-y-2">
               {footerLinks.company.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-black hover:text-gray-800 transition-colors duration-300 text-sm"
                   >
                     {link.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
