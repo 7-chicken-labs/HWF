@@ -29,7 +29,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     >
       {/* Speech Bubble */}
       {description && (
-        <div className="relative mb-6 bg-[color:var(--bubble)] rounded-2xl p-5"
+        <div className="relative mb-6 bg-[color:var(--bubble)] rounded-2xl p-5 shadow-xl"
           style={{ backgroundColor: bubbleColor }}
         >
           <p className="text-sm text-left leading-relaxed text-gray-700">{description}</p>
