@@ -11,6 +11,7 @@ function NavBar() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
     { label: "Programs", href: "/programs" },
+    { label: "Resources", href: "/resources" },
     { label: "Contact", href: "/contact" },
   ];
 
