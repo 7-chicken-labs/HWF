@@ -9,18 +9,18 @@ export default function Home() {
         title={
           <>
             <span className="">
-              Coaching Programs
+              We&apos;d Love to 
               <br />
-               That Transform Lives
+               Hear From You
             </span>
           </>
         }
-        subtitle="Our programs help you build real coaching skills and create lasting impact."
-        backgroundImage="/images/program-bg.jpg"
+        subtitle="Reach out with any questions or thoughts real conversations are where every journey begins."
+        backgroundImage="/images/contact-bg.jpg"
       />
       <ContactUsPage />
       <ParallaxSection
-        backgroundImage="/images/program-bg.jpg"
+        backgroundImage="/images/contact-bg.jpg"
         title="You Deserve to Feel Like Yourself Again."
         subtitle="Your path to lasting well-being starts here - guided by certified coaches who understand your pace, your goals, and your life."
         buttonText="Join a Program"

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Heart, Brain, Dumbbell, Salad, Users, Briefcase } from 'lucide-react';
 
 // interface Card {
@@ -17,7 +17,7 @@ interface Program {
 
 const WellnessSection: React.FC = () => {
 //   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
-  const [hoveredProgram, setHoveredProgram] = useState<number | null>(null);
+  // const [hoveredProgram, setHoveredProgram] = useState<number | null>(null);
 
 //   const cards: Card[] = [
 //     {
@@ -123,19 +123,11 @@ const WellnessSection: React.FC = () => {
             {programs.map((program, index) => (
               <div
                 key={index}
-                className={`bg-white rounded-2xl p-8 shadow-md transition-all duration-300 border-2 ${
-                  hoveredProgram === index 
-                    ? 'border-amber-400 shadow-xl transform -translate-y-1' 
-                    : 'border-transparent'
-                }`}
-                onMouseEnter={() => setHoveredProgram(index)}
-                onMouseLeave={() => setHoveredProgram(null)}
+                className={`bg-white rounded-2xl p-8 shadow-md transition-all duration-300 border-2 border-amber-400`}
+                // onMouseEnter={() => setHoveredProgram(index)}
+                // onMouseLeave={() => setHoveredProgram(null)}
               >
-                <div className={`inline-flex p-3 rounded-xl mb-4 transition-all duration-300 ${
-                  hoveredProgram === index 
-                    ? 'bg-amber-100 text-amber-600' 
-                    : 'bg-gray-100 text-gray-600'
-                }`}>
+                <div className={`inline-flex p-3 rounded-xl mb-4 transition-all duration-300 bg-amber-100 text-amber-600`}>
                   {program.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">

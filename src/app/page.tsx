@@ -65,12 +65,12 @@ export default function Home() {
           </>
         }
         imageUrl="/images/home-image-1.jpg"
-        imagePosition="right"
+        imagePosition="left"
       />
 
       <TwoColumnSection
         label="About HWF"
-        imagePosition="left"
+        imagePosition="right"
         title={<>Wellness That Feels Like It&apos;s Made for You</>}
         description={
           <>

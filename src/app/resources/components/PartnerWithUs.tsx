@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react";
+import React from "react";
 import { MessageCircle, Handshake, Building, Lightbulb } from "lucide-react";
 
 interface Feature {
@@ -46,7 +46,7 @@ const PartnerWithUs: React.FC<PartnerWithUsProps> = ({
   features = defaultFeatures,
   className = "",
 }) => {
-  const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
+  // const [hoveredFeature, setHoveredFeature] = useState<number | null>(null);
 
   return (
     <section className={`py-16 px-4 max-w-6xl mx-auto ${className} text-black`}>
@@ -61,20 +61,12 @@ Whether you&apos;re a coach, company, NGO, or tech innovator, we invite you to c
         {features.map((feature, index) => (
           <div
             key={index}
-            className={`bg-white rounded-2xl p-8 shadow-md transition-all duration-300 border-2 ${
-              hoveredFeature === index
-                ? "border-amber-400 shadow-xl transform -translate-y-1"
-                : "border-transparent"
-            }`}
-            onMouseEnter={() => setHoveredFeature(index)}
-            onMouseLeave={() => setHoveredFeature(null)}
+            className={`bg-white rounded-2xl p-8 shadow-md transition-all duration-300 border-2 border-amber-400`}
+            // onMouseEnter={() => setHoveredFeature(index)}
+            // onMouseLeave={() => setHoveredFeature(null)}
           >
             <div
-              className={`inline-flex p-3 rounded-xl mb-4 transition-all duration-300 ${
-                hoveredFeature === index
-                  ? "bg-amber-100 text-amber-600"
-                  : "bg-gray-100 text-gray-600"
-              }`}
+              className={`inline-flex p-3 rounded-xl mb-4 transition-all duration-300 bg-amber-100 text-amber-600`}
             >
               {feature.icon}
             </div>
