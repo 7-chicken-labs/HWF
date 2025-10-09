@@ -165,11 +165,11 @@ const ContactUsPage = () => {
 
   return (
     <section className="py-16 lg:py-24 text-black">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div>
+        <div className="mb-16">
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="brand-text audiowide text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight md:text-center mb-8">
+            <h2 className="brand-text audiowide text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight md:text-center mb-4">
               Get in Touch
             </h2>
 
@@ -180,7 +180,7 @@ const ContactUsPage = () => {
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto py-16">
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Contact Info */}
             <div className="lg:col-span-1 space-y-6">
@@ -242,7 +242,7 @@ const ContactUsPage = () => {
 
             {/* Form */}
             <div className="lg:col-span-2">
-              <div className="bg-white rounded-2xl shadow-md p-8 md:p-10 border-2 border-transparent transition-all duration-300 hover:border-amber-400 hover:shadow-xl transform hover:-translate-y-1">
+              <div className="bg-white rounded-2xl shadow-md p-6 py-10 md:p-10 border-2 border-transparent transition-all duration-300 hover:border-amber-400 hover:shadow-xl transform hover:-translate-y-1">
                 <h2 className="text-3xl font-bold mb-2 text-gray-900">
                   Send Us a Message
                 </h2>
@@ -344,7 +344,7 @@ const ContactUsPage = () => {
           </div>
 
           {/* Map */}
-          <div className="mt-16 rounded-2xl overflow-hidden shadow-md border-2 border-transparent transition-all duration-300 hover:border-amber-400 hover:shadow-xl transform hover:-translate-y-1">
+          {/* <div className="mt-16 rounded-2xl overflow-hidden shadow-md border-2 border-transparent transition-all duration-300 hover:border-amber-400 hover:shadow-xl transform hover:-translate-y-1">
             <div className="w-full h-96 relative">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609823277!2d72.74109995709662!3d19.08219783958221!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
@@ -357,7 +357,7 @@ const ContactUsPage = () => {
                 className="absolute inset-0"
               ></iframe>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

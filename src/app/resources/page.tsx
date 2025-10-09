@@ -9,20 +9,18 @@ export default function Home() {
         title={
           <>
             <span className="">
-              Wellness That Feels.
+              Resources for Your 
               <br />
-              Like It&apos;s Made for You.
+              Wellness Journey
             </span>
           </>
         }
-        subtitle="No quick fixes. No judgment. Just real support for real life"
-        backgroundImage="/images/home-bg.jpg"
-        buttonText="Being your wellness journey"
-        buttonLink="/programs"
+        subtitle="Your wellness journey is personal and it deserves support that meets you where you are"
+        backgroundImage="/images/resources-bg.jpg"
       />
       <PartnerWithUs />
       <ParallaxSection
-        backgroundImage="/images/home-bg.jpg"
+        backgroundImage="/images/resources-bg.jpg"
         title="Feeling Drained by Daily Life? You&apos;re Not Alone."
         subtitle="Late nights. Constant stress. Aches that linger and worries that won&apos;t quit.
 When work, family responsibilities, and health demands collide, staying well- physically or
